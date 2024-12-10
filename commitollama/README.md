@@ -62,6 +62,24 @@ A Github Copilot commits generator free alternative, that run on your device usi
 
 - Custom Commit Temperature: The temperature that will be used to generate the commit message.
 
+from setuptools import setup, find_packages
+
+setup(
+    name='commitollama',
+    version='0.1',
+    packages=find_packages(),
+    install_requires=[
+        # 在這裡列出你的依賴項，例如：
+        # 'requests',
+    ],
+    entry_points={
+        'console_scripts': [
+            # 在這裡定義命令行腳本，例如：
+            # 'commitollama=commitollama:main',
+        ],
+    },
+)
+
 ## Known Issues
 
 Sometimes can generate quite long commits, but it give you an idea of what the commit should be and can be edited manually to achieve the correct length.
